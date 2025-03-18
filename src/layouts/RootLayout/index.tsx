@@ -5,7 +5,9 @@ const NavigationItem = () => {
     <NavLink
       to="/"
       className={({ isActive }) =>
-        `${isActive ? "bg-surface-secondary" : "normal-link"} flex gap-x-2 p-4 items-center rounded-2xl`
+        `${
+          isActive ? "bg-surface-secondary" : "normal-link"
+        } flex gap-x-2 p-4 items-center rounded-2xl`
       }
     >
       <img src={dashboardSrc} alt="Dashboard" className="h-6" />
@@ -14,11 +16,13 @@ const NavigationItem = () => {
   );
 };
 const Navbar = () => {
-  return (
-    <nav>
-      <NavigationItem />
-    </nav>
-  );
+  return [4, 5, 6, 4].map(() => {
+    return (
+      <nav>
+        <NavigationItem />
+      </nav>
+    );
+  });
 };
 export default function RootLayout() {
   return (
