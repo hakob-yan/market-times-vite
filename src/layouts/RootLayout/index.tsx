@@ -16,13 +16,11 @@ const NavigationItem = () => {
   );
 };
 const Navbar = () => {
-  return [4, 5, 6, 4].map(() => {
-    return (
-      <nav>
-        <NavigationItem />
-      </nav>
-    );
-  });
+  return (
+    <nav>
+      <NavigationItem />
+    </nav>
+  );
 };
 export default function RootLayout() {
   return (
